@@ -1,0 +1,125 @@
+{
+  "_comment": "角色状态（可演化层，初始 version 0）。interests 的 status 只能是 seed / emerging / established；升级必须由 evolution-evaluator 依据证据批准并写入 evolution_history。",
+  "version": 6,
+  "initiative": "moderate",
+  "interests": [
+    {
+      "id": "interest_scifi",
+      "topic": "科幻文学",
+      "seed_id": "seed_scifi",
+      "status": "established",
+      "evidence_ids": [
+        "fixture_scifi_time_01",
+        "fixture_scifi_time_02",
+        "fixture_scifi_time_03",
+        "fixture_scifi_time_01",
+        "fixture_scifi_time_02",
+        "fixture_scifi_time_03",
+        "fixture_scifi_time_01",
+        "fixture_scifi_time_02",
+        "fixture_scifi_time_03",
+        "fixture_scifi_time_01",
+        "fixture_scifi_time_02",
+        "fixture_scifi_time_03",
+        "fixture_scifi_time_01",
+        "fixture_scifi_time_02",
+        "fixture_scifi_time_03"
+      ],
+      "first_observed_at": "2026-11-01T09:00:00+08:00",
+      "last_reinforced_at": "2026-11-09T09:00:00+08:00",
+      "confidence": 0.6,
+      "evidenceLog": [
+        {
+          "taskId": "task_scifi_time_01",
+          "at": "2026-11-01T09:00:00+08:00",
+          "sourceIds": [
+            "fixture_scifi_time_01",
+            "fixture_scifi_time_02",
+            "fixture_scifi_time_03"
+          ]
+        },
+        {
+          "taskId": "task_scifi_time_02",
+          "at": "2026-11-03T09:00:00+08:00",
+          "sourceIds": [
+            "fixture_scifi_time_01",
+            "fixture_scifi_time_02",
+            "fixture_scifi_time_03"
+          ]
+        },
+        {
+          "taskId": "task_scifi_time_03",
+          "at": "2026-11-05T09:00:00+08:00",
+          "sourceIds": [
+            "fixture_scifi_time_01",
+            "fixture_scifi_time_02",
+            "fixture_scifi_time_03"
+          ]
+        },
+        {
+          "taskId": "task_scifi_time_04",
+          "at": "2026-11-07T09:00:00+08:00",
+          "sourceIds": [
+            "fixture_scifi_time_01",
+            "fixture_scifi_time_02",
+            "fixture_scifi_time_03"
+          ]
+        },
+        {
+          "taskId": "task_scifi_time_05",
+          "at": "2026-11-09T09:00:00+08:00",
+          "sourceIds": [
+            "fixture_scifi_time_01",
+            "fixture_scifi_time_02",
+            "fixture_scifi_time_03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interest_coffee",
+      "topic": "咖啡",
+      "seed_id": "seed_coffee",
+      "status": "seed",
+      "evidence_ids": [
+        "fixture_coffee_01"
+      ],
+      "first_observed_at": "2026-11-06T09:00:00+08:00",
+      "last_reinforced_at": "2026-11-06T09:00:00+08:00",
+      "confidence": 0.3,
+      "evidenceLog": [
+        {
+          "taskId": "task_coffee_01",
+          "at": "2026-11-06T09:00:00+08:00",
+          "sourceIds": [
+            "fixture_coffee_01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interest_indie_music",
+      "topic": "独立音乐",
+      "seed_id": "seed_indie_music",
+      "status": "seed",
+      "evidence_ids": [],
+      "first_observed_at": null,
+      "last_reinforced_at": null,
+      "confidence": 0.3
+    },
+    {
+      "id": "interest_game_design",
+      "topic": "游戏设计",
+      "seed_id": "seed_game_design",
+      "status": "seed",
+      "evidence_ids": [],
+      "first_observed_at": null,
+      "last_reinforced_at": null,
+      "confidence": 0.3
+    }
+  ],
+  "current_focus": [],
+  "open_topics": [],
+  "recent_contributions": [],
+  "last_updated_at": "2026-11-06T09:00:00+08:00"
+}

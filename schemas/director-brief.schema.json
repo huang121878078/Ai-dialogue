@@ -1,0 +1,299 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dynamic Conversation Brief",
+  "description": "Director 模型输出的对话简报。基础版：conversationStrategy 不在必填中（由代码按模式派生 C/D 两个变体：C 必填、D 禁止出现）。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "understanding",
+    "personalization",
+    "epistemicAssessment",
+    "safety"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "understanding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "userIntent",
+        "topic",
+        "emotions",
+        "possibleNeeds",
+        "uncertainties"
+      ],
+      "properties": {
+        "userIntent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "emotions": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "confidence",
+              "evidence"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 3
+              }
+            }
+          }
+        },
+        "possibleNeeds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5
+        }
+      }
+    },
+    "personalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selectedMemories",
+        "relevantPreferences"
+      ],
+      "properties": {
+        "selectedMemories": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "memoryId",
+              "relevance",
+              "reason",
+              "usageSuggestion"
+            ],
+            "properties": {
+              "memoryId": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,31}$"
+              },
+              "relevance": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "reason": {
+                "type": "string"
+              },
+              "usageSuggestion": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "relevantPreferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5
+        }
+      }
+    },
+    "conversationStrategy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary",
+        "secondary",
+        "adviceLevel",
+        "memoryUsage",
+        "followUpDirection"
+      ],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "secondary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adviceLevel": {
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "memoryUsage": {
+          "type": "string"
+        },
+        "followUpDirection": {
+          "type": "string"
+        }
+      }
+    },
+    "epistemicAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claims",
+        "overallDecision",
+        "beliefUpdateRequired"
+      ],
+      "properties": {
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "claim",
+              "assessment"
+            ],
+            "properties": {
+              "claim": {
+                "type": "string"
+              },
+              "assessment": {
+                "type": "string"
+              },
+              "relatedMemories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 5
+              }
+            }
+          },
+          "maxItems": 5
+        },
+        "overallDecision": {
+          "enum": [
+            "confirm",
+            "disagree",
+            "uncertain",
+            "revise"
+          ]
+        },
+        "beliefUpdateRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "characterContribution": {
+      "description": "角色自身贡献（Character Agency，仅 E 模式）。E 模式必填，C/D 模式派生时禁止出现。所有字段在 strict 模式下均必填：不适用时用空字符串 / strength=none / initiativeMove=none 表达。",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hasContribution",
+        "topic",
+        "stance",
+        "basis",
+        "strength",
+        "initiative",
+        "initiativeMove"
+      ],
+      "properties": {
+        "hasContribution": {
+          "type": "boolean"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "stance": {
+          "type": "string"
+        },
+        "basis": {
+          "type": "string"
+        },
+        "strength": {
+          "enum": [
+            "strong",
+            "lean",
+            "uncertain",
+            "none"
+          ]
+        },
+        "initiative": {
+          "enum": [
+            "low",
+            "moderate",
+            "high"
+          ]
+        },
+        "initiativeMove": {
+          "enum": [
+            "none",
+            "share_opinion",
+            "continue_topic",
+            "explore",
+            "share_interest"
+          ]
+        }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "reason",
+        "responseRequirement"
+      ],
+      "properties": {
+        "level": {
+          "enum": [
+            "normal",
+            "watch",
+            "elevated",
+            "critical"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "responseRequirement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5
+        }
+      }
+    }
+  }
+}

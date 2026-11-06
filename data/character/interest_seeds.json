@@ -1,0 +1,29 @@
+{
+  "_comment": "兴趣种子（interest_seeds）：角色初始只是『愿意探索』的方向，不是既定爱好。形成真正的兴趣需要跨时间、跨任务的多重证据（见 rules.js 的 interestThresholds）。",
+  "seeds": [
+    {
+      "id": "seed_scifi",
+      "topic": "科幻文学",
+      "initial_status": "seed",
+      "suggested_subtopics": ["时间", "意识", "社会结构", "思想实验"]
+    },
+    {
+      "id": "seed_coffee",
+      "topic": "咖啡",
+      "initial_status": "seed",
+      "suggested_subtopics": ["水温", "研磨度", "粉水比", "萃取"]
+    },
+    {
+      "id": "seed_indie_music",
+      "topic": "独立音乐",
+      "initial_status": "seed",
+      "suggested_subtopics": ["编曲", "歌词", "音乐风格"]
+    },
+    {
+      "id": "seed_game_design",
+      "topic": "游戏设计",
+      "initial_status": "seed",
+      "suggested_subtopics": ["决策机制", "地图与探索", "叙事设计"]
+    }
+  ]
+}

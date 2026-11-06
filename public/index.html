@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>双模型陪伴实验台 · qwen3.7-flash</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- 顶栏：标题 / 模式选择 / 重置 -->
+  <header class="topbar">
+    <div class="topbar-title">
+      <h1>双模型陪伴实验台</h1>
+      <span class="topbar-sub">qwen3.7-flash · 静态数据验证</span>
+    </div>
+    <div class="mode-picker" id="mode-picker">
+      <label class="mode-option">
+        <input type="radio" name="mode" value="A" checked />
+        <span class="mode-name">A</span>
+        <span class="mode-desc">单模型 · 全量数据</span>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="B" />
+        <span class="mode-name">B</span>
+        <span class="mode-desc">单模型 · 精选记忆</span>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="C" />
+        <span class="mode-name">C</span>
+        <span class="mode-desc">双模型 · 含对话策略</span>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="D" />
+        <span class="mode-name">D</span>
+        <span class="mode-desc">双模型 · 无策略</span>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="E" />
+        <span class="mode-name">E</span>
+        <span class="mode-desc">双模型 · 角色主体性</span>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" value="R" />
+        <span class="mode-name">R</span>
+        <span class="mode-desc">智能路由 · 快慢分流</span>
+      </label>
+    </div>
+    <button id="reset-btn" class="btn-secondary" type="button">重置会话</button>
+    <button id="memory-reset-btn" class="btn-secondary" type="button" title="清空默认测试设备在 CompanionMem 的全部记忆，并把本地会话一并重置——每次测试前用">清空测试记忆</button>
+    <span id="memory-agent" class="memory-agent" title="当前记忆归属的 CompanionMem 设备号（.env 配置 CM_AGENT_ID 可切换）"></span>
+    <label class="thinking-toggle" title="开启 qwen3.7 思考模式：Director 与 Generator 的思考过程会实时显示在回复上方的折叠区。注意：会增加耗时与 token 消耗">
+      <input type="checkbox" id="thinking-toggle" />
+      <span>显示模型思考</span>
+    </label>
+    <label class="thinking-toggle" title="开启联网搜索工具（IQS）：模型按需自主调用 web_search——问实时资讯/新闻/特定实体时会搜索（带来源回填），闲聊和情绪陪伴不搜。只在需要时才产生搜索延迟">
+      <input type="checkbox" id="search-toggle" />
+      <span>联网搜索</span>
+    </label>
+  </header>
+
+  <main class="layout">
+    <!-- 左：聊天主区 -->
+    <section class="chat-area">
+      <div class="messages" id="messages">
+        <div class="empty-hint" id="empty-hint">
+          选择一种模式，向「小满」说点什么吧。<br />
+          A/B 为单模型对照，C/D 为双模型（Director 分析 → Generator 回复），R 为智能路由（简单消息直答 / 复杂消息走双模型）。
+        </div>
+      </div>
+      <div class="composer">
+        <textarea
+          id="input"
+          rows="2"
+          placeholder="输入消息，Enter 发送，Shift+Enter 换行"
+          disabled
+        ></textarea>
+        <button id="send-btn" class="btn-primary" type="button" disabled>发送</button>
+      </div>
+    </section>
+
+    <!-- 右：分析面板 -->
+    <aside class="panel" id="panel">
+      <div class="panel-tabs">
+        <button class="panel-tab active" data-tab="analysis" type="button">本轮分析</button>
+        <button class="panel-tab" data-tab="metrics" type="button">指标</button>
+        <button class="panel-tab" data-tab="data" type="button">数据</button>
+        <button class="panel-collapse" id="panel-collapse" type="button" title="折叠/展开面板">»</button>
+      </div>
+
+      <div class="panel-body">
+        <!-- Tab 1: 本轮分析 -->
+        <div class="tab-page active" id="tab-analysis">
+          <div class="tab-placeholder" id="analysis-placeholder">发送消息后，这里展示 Director 的 Brief、选中记忆与校验状态。</div>
+          <div id="analysis-content" class="hidden">
+            <div id="route-card" class="route-card hidden">
+              <div class="section-title">路由决策</div>
+              <div id="route-detail"></div>
+            </div>
+            <div id="degraded-banner" class="degraded-banner hidden">
+              Director 输出校验失败，本轮已降级为单模型模式
+            </div>
+            <div class="section">
+              <div class="section-title">校验状态</div>
+              <div id="validation-badge" class="badge"></div>
+              <div id="validation-detail" class="muted small"></div>
+            </div>
+            <div class="section">
+              <div class="section-title">选中记忆</div>
+              <div id="memory-cards"></div>
+            </div>
+            <div class="section">
+              <div class="section-title">Dynamic Conversation Brief</div>
+              <details open>
+                <summary class="muted small">点击折叠 / 展开 JSON</summary>
+                <pre class="json-pre" id="brief-json"></pre>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: 指标 -->
+        <div class="tab-page" id="tab-metrics">
+          <div class="tab-placeholder" id="metrics-placeholder">发送消息后，这里展示本轮耗时、token 与成本估算。</div>
+          <div id="metrics-content" class="hidden">
+            <table class="metrics-table" id="metrics-table"></table>
+          </div>
+        </div>
+
+        <!-- Tab 3: 静态数据 -->
+        <div class="tab-page" id="tab-data">
+          <div id="data-content" class="data-tree">加载静态数据中…</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

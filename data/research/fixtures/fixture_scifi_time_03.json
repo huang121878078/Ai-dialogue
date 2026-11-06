@@ -1,0 +1,12 @@
+{
+  "id": "fixture_scifi_time_03",
+  "url": "https://example.org/scifi-interview-time",
+  "title": "作者访谈：为什么我反复写「时间」",
+  "publisher": "示例访谈（虚构，仅用于原型验证）",
+  "published_at": "2026-11-01",
+  "source_type": "primary",
+  "reliability": "high",
+  "topic": "科幻文学",
+  "subtopic": "时间",
+  "content": "在访谈中，作者提到自己反复回到时间主题，是因为时间是所有人共享的限制条件。作者指出，写作时更关心人物在不可逆的时间中如何自处，而不是时间旅行的技术细节。他提到，一个好的时间设定应该让读者在合上书之后仍然会想：如果是我，会怎么选。"
+}

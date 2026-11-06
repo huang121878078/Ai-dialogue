@@ -1,0 +1,188 @@
+{
+  "_comment": "角色知识库：每条知识必须可追溯到 source_ids，否则只能标记为 inferred（不允许当事实）。status: active / stale / uncertain / retracted。",
+  "version": 6,
+  "items": [
+    {
+      "id": "task_scifi_time_01_knowledge_001",
+      "topic": "科幻文学",
+      "claim": "评论者认为，当代科幻对时间的处理已经从「未来预言」转向「因果结构的实验」",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_01"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_002",
+      "topic": "科幻文学",
+      "claim": "文章指出，一类作品把时间当作可以被重写的形式，探讨选择与后果之间的关系",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_01"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_003",
+      "topic": "科幻文学",
+      "claim": "另一类作品则强调时间的不可逆性，把人物的有限性作为叙事核心",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_01"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_004",
+      "topic": "科幻文学",
+      "claim": "作者提出，真正打动读者的往往不是设定本身，而是设定如何迫使人物做出艰难选择",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_01"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_005",
+      "topic": "科幻文学",
+      "claim": "文中还比较了不同作品处理时间悖论的差异，认为路径越简单、情感越集中",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_01"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_006",
+      "topic": "科幻文学",
+      "claim": "该文指出，时间议题在科幻中通常服务于三个目的：制造认知惊奇、检验伦理选择、承载情感遗憾",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_02"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_007",
+      "topic": "科幻文学",
+      "claim": "作者认为，只有当时间设定与人物动机咬合时，叙事才成立",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_02"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_008",
+      "topic": "科幻文学",
+      "claim": "文章提出，把时间当作纯粹炫技的作品容易空洞，而把时间当作情感容器的作品更容易留下余味",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_02"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_009",
+      "topic": "科幻文学",
+      "claim": "同时提醒读者注意：不同文化对时间循环的理解并不相同，不宜用单一框架概括",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_scifi_time_02"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_scifi_time_01_knowledge_010",
+      "topic": "科幻文学",
+      "claim": "作者指出，写作时更关心人物在不可逆的时间中如何自处，而不是时间旅行的技术细节",
+      "claim_type": "primary_source_statement",
+      "source_ids": [
+        "fixture_scifi_time_03"
+      ],
+      "confidence": 0.8,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-01T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_coffee_01_knowledge_001",
+      "topic": "咖啡",
+      "claim": "文章指出，水温会影响萃取效率：温度偏高更容易萃出苦味与杂味，偏低则容易偏酸",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_coffee_01"
+      ],
+      "confidence": 0.6,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-06T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_coffee_01_knowledge_002",
+      "topic": "咖啡",
+      "claim": "作者认为，浅烘豆通常适合较高水温，深烘豆则更低",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_coffee_01"
+      ],
+      "confidence": 0.6,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-06T09:00:00+08:00",
+      "expires_at": null
+    },
+    {
+      "id": "task_coffee_01_knowledge_003",
+      "topic": "咖啡",
+      "claim": "文中提醒，水温只是变量之一，研磨度与粉水比同样关键",
+      "claim_type": "interpretation",
+      "source_ids": [
+        "fixture_coffee_01"
+      ],
+      "confidence": 0.6,
+      "status": "active",
+      "lowQuality": false,
+      "created_at": "2026-11-06T09:00:00+08:00",
+      "expires_at": null
+    }
+  ]
+}

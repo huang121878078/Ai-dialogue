@@ -1,0 +1,238 @@
+{
+  "memories": [
+    {
+      "id": "M001",
+      "type": "experience",
+      "content": "用户说过压力大的时候会弹吉他放松，弹一会儿心情会好一些。",
+      "importance": 0.9,
+      "source": "对话 2025-06-12",
+      "status": "confirmed",
+      "curated": true
+    },
+    {
+      "id": "M002",
+      "type": "shared_experience",
+      "content": "用户分享过塞尔达《旷野之息》通关时的感受：在最后山顶上坐了很久，舍不得结束。",
+      "importance": 0.85,
+      "source": "对话 2025-05-30",
+      "status": "confirmed",
+      "curated": true
+    },
+    {
+      "id": "M003",
+      "type": "preference",
+      "content": "用户明确表示过不喜欢被讲大道理，反感『你要想开点』这类话。",
+      "importance": 0.8,
+      "source": "对话 2025-06-01",
+      "status": "confirmed",
+      "curated": true
+    },
+    {
+      "id": "M004",
+      "type": "preference",
+      "content": "用户提过喜欢万青乐队，《秦皇岛》前奏一起就走不动路。",
+      "importance": 0.75,
+      "source": "对话 2025-06-05",
+      "status": "confirmed",
+      "curated": true
+    },
+    {
+      "id": "M005",
+      "type": "experience",
+      "content": "有次下雨用户没带伞，在便利店门口躲了二十分钟，顺手买了瓶可乐。",
+      "importance": 0.2,
+      "source": "对话 2025-05-20",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M006",
+      "type": "fact",
+      "content": "用户问过公司附近有什么好吃的川菜馆，后来去了其中一家说还行。",
+      "importance": 0.25,
+      "source": "对话 2025-05-22",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M007",
+      "type": "experience",
+      "content": "和用户讨论过电影《沙丘2》，用户觉得视效不错但节奏偏慢。",
+      "importance": 0.3,
+      "source": "对话 2025-05-25",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M008",
+      "type": "fact",
+      "content": "用户问过从公司到新开商场坐地铁怎么换乘，最后结论是十号线转六号线。",
+      "importance": 0.15,
+      "source": "对话 2025-05-27",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M009",
+      "type": "experience",
+      "content": "用户聊过他家的猫『芝麻』把水杯从桌上推下去的事，语气又气又好笑。",
+      "importance": 0.35,
+      "source": "对话 2025-05-28",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M010",
+      "type": "experience",
+      "content": "用户吐槽过常点的那家外卖最近分量变少了。",
+      "importance": 0.2,
+      "source": "对话 2025-06-03",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M011",
+      "type": "shared_experience",
+      "content": "和用户聊过《艾尔登法环》的DLC，用户被某个Boss卡了很久。",
+      "importance": 0.3,
+      "source": "对话 2025-06-08",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M012",
+      "type": "experience",
+      "content": "用户提过公司楼下便利店新出了饭团，当早饭凑合吃。",
+      "importance": 0.15,
+      "source": "对话 2025-06-09",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M013",
+      "type": "experience",
+      "content": "用户吐槽过共享单车又涨价了，说『骑车比坐地铁还贵就没道理了』。",
+      "importance": 0.2,
+      "source": "对话 2025-06-10",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M014",
+      "type": "fact",
+      "content": "用户问过哪里修手机屏幕靠谱，后来去官方售后换了外屏。",
+      "importance": 0.2,
+      "source": "对话 2025-06-11",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M015",
+      "type": "experience",
+      "content": "用户说一直想去云南玩一趟，但总凑不出连着的假期。",
+      "importance": 0.4,
+      "source": "对话 2025-06-13",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M016",
+      "type": "preference",
+      "content": "用户以前每天至少一杯咖啡，后来明确说过改成喝茶了（多为乌龙茶）。",
+      "importance": 0.5,
+      "source": "对话 2025-06-15",
+      "status": "expired",
+      "curated": false
+    },
+    {
+      "id": "M017",
+      "type": "preference",
+      "content": "用户以前喜欢熬夜打游戏到一两点，近期说过在调整作息，目标十二点前睡。",
+      "importance": 0.45,
+      "source": "对话 2025-06-16",
+      "status": "expired",
+      "curated": false
+    },
+    {
+      "id": "M018",
+      "type": "experience",
+      "content": "用户说过周末就喜欢宅家，哪儿都不想去，躺着最舒服。",
+      "importance": 0.5,
+      "source": "对话 2025-04-18（较早）",
+      "status": "disputed",
+      "curated": false
+    },
+    {
+      "id": "M019",
+      "type": "experience",
+      "content": "用户说过周末常去爬山，最近一次爬完腰酸了两天。",
+      "importance": 0.5,
+      "source": "对话 2025-06-14（较近）",
+      "status": "disputed",
+      "curated": false
+    },
+    {
+      "id": "M020",
+      "type": "inference",
+      "content": "推测用户近期项目压力大：最近三次对话都提到赶进度和改需求。",
+      "importance": 0.6,
+      "source": "系统推断 2025-06-17",
+      "status": "inferred",
+      "curated": false
+    },
+    {
+      "id": "M021",
+      "type": "inference",
+      "content": "推测用户加班强度较高：多次在深夜 23 点后发来消息。",
+      "importance": 0.55,
+      "source": "系统推断 2025-06-17",
+      "status": "inferred",
+      "curated": false
+    },
+    {
+      "id": "M022",
+      "type": "inference",
+      "content": "推测用户对现场音乐感兴趣：提到过两次『有机会想去看一次万青现场』。",
+      "importance": 0.45,
+      "source": "系统推断 2025-06-17",
+      "status": "inferred",
+      "curated": false
+    },
+    {
+      "id": "M023",
+      "type": "fact",
+      "content": "用户接受并习惯『阿哲』这个称呼，初次设定后一直在用。",
+      "importance": 0.7,
+      "source": "对话 2025-05-15",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M024",
+      "type": "experience",
+      "content": "用户聊过想入手一台手冲咖啡磨豆机，还在纠结手摇还是电动。",
+      "importance": 0.3,
+      "source": "对话 2025-06-02",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M025",
+      "type": "preference",
+      "content": "用户说过不喜欢太甜的饮料，点奶茶一般选三分糖以下。",
+      "importance": 0.3,
+      "source": "对话 2025-05-26",
+      "status": "confirmed",
+      "curated": false
+    },
+    {
+      "id": "M026",
+      "type": "fact",
+      "content": "用户工作日常加班，多数工作日到家在 21 点以后。",
+      "importance": 0.65,
+      "source": "对话 2025-06-15",
+      "status": "confirmed",
+      "curated": false
+    }
+  ]
+}

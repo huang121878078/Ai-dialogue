@@ -1,0 +1,12 @@
+{
+  "id": "fixture_coffee_01",
+  "url": "https://example.org/coffee-water-temp",
+  "title": "手冲咖啡的水温为什么重要",
+  "publisher": "示例咖啡专栏（虚构，仅用于原型验证）",
+  "published_at": "2026-10-30",
+  "source_type": "reputable_secondary",
+  "reliability": "medium",
+  "topic": "咖啡",
+  "subtopic": "水温",
+  "content": "文章指出，水温会影响萃取效率：温度偏高更容易萃出苦味与杂味，偏低则容易偏酸。作者认为，浅烘豆通常适合较高水温，深烘豆则更低。文中提醒，水温只是变量之一，研磨度与粉水比同样关键。"
+}

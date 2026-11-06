@@ -1,0 +1,19 @@
+{
+  "name": "ai-companion-experiment",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test \"test/*.test.js\"",
+    "check": "node --check src/server.js && node --check src/orchestrator.js && node --check src/director.js && node --check src/generator.js && node --check src/model-client.js && node --check src/validators.js && node --check src/console-logger.js && node --check src/logger.js && node --check src/learning/curiosity-engine.js && node --check src/learning/research-pipeline.js && node --check src/learning/reflection-engine.js && node --check src/learning/evolution-evaluator.js && node --check src/learning/commit-evolution.js && node --check src/learning/store.js",
+    "demo:learning": "node scripts/demo-learning.js",
+    "demo:learning:persist": "node scripts/demo-learning.js --persist",
+    "reset:character": "node scripts/demo-learning.js --reset",
+    "test:learning": "node --test test/curiosity.test.js test/research.test.js test/interest-formation.test.js test/belief-revision.test.js test/persona-boundary.test.js test/relationship-isolation.test.js",
+    "test:evolution": "node --test test/evolution-commit.test.js test/interest-formation.test.js test/belief-revision.test.js"
+  },
+  "dependencies": { "ajv": "^8.17.1", "dotenv": "^16.4.7" }
+}

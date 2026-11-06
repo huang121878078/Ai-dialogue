@@ -1,0 +1,5 @@
+{
+  "_comment": "好奇心队列：由 curiosity-engine 生成候选并按 priority 排序；status: pending / scheduled / done / rejected。队列不代表会执行——预算与安全约束在调度前再校验。",
+  "version": 0,
+  "tasks": []
+}

@@ -1,0 +1,146 @@
+{
+  "_comment": "角色观点（beliefs）：与『知识』严格分开——知识有来源，观点是角色的判断（aesthetic_opinion / value_judgment / interpretation）。每条观点必须保留 supporting/counter 证据与 revision_history，可回滚。",
+  "version": 6,
+  "beliefs": [
+    {
+      "id": "belief_game_map",
+      "topic": "游戏设计",
+      "statement": "好游戏不一定需要很大的世界规模，玩法深度和设计创新更重要",
+      "type": "aesthetic_opinion",
+      "status": "active",
+      "confidence": 0.7,
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "revision_history": [],
+      "created_at": "2026-11-01T10:00:00+08:00"
+    },
+    {
+      "id": "belief_rest",
+      "topic": "休息",
+      "statement": "休息不需要有产出，纯粹发呆也不该有负罪感",
+      "type": "value_judgment",
+      "status": "active",
+      "confidence": 0.8,
+      "supporting_evidence_ids": [],
+      "counter_evidence_ids": [],
+      "revision_history": [],
+      "created_at": "2026-11-01T10:00:00+08:00"
+    },
+    {
+      "_comment": "可解释型观点（interpretation）：允许在证据支持下登记修订，但仍不自动改写措辞。用于演示 belief revision 的证据链。",
+      "id": "belief_scifi_time",
+      "topic": "科幻文学",
+      "statement": "科幻作品里的时间设定大多是为了炫技，很少真正服务于人物选择",
+      "type": "interpretation",
+      "status": "active",
+      "confidence": 0.6,
+      "supporting_evidence_ids": [
+        "task_scifi_time_01_knowledge_001",
+        "task_scifi_time_01_knowledge_002",
+        "task_scifi_time_01_knowledge_003",
+        "task_scifi_time_01_knowledge_005",
+        "task_scifi_time_01_knowledge_006",
+        "task_scifi_time_01_knowledge_007",
+        "task_scifi_time_01_knowledge_008"
+      ],
+      "counter_evidence_ids": [
+        "task_scifi_time_01_knowledge_004",
+        "task_scifi_time_01_knowledge_009",
+        "task_scifi_time_01_knowledge_010"
+      ],
+      "revision_history": [
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "support",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_001"
+          ],
+          "reason": "新证据支持现有观点",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "support",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_002"
+          ],
+          "reason": "新证据支持现有观点",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "support",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_003"
+          ],
+          "reason": "新证据支持现有观点",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "challenge",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_004"
+          ],
+          "reason": "新证据与现有观点存在张力，需要评估是否修正或保留不确定",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "support",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_005"
+          ],
+          "reason": "新证据支持现有观点",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "support",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_006"
+          ],
+          "reason": "新证据支持现有观点",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "support",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_007"
+          ],
+          "reason": "新证据支持现有观点",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "support",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_008"
+          ],
+          "reason": "新证据支持现有观点",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "challenge",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_009"
+          ],
+          "reason": "新证据与现有观点存在张力，需要评估是否修正或保留不确定",
+          "statementChanged": false
+        },
+        {
+          "at": "2026-11-01T09:00:00+08:00",
+          "direction": "challenge",
+          "evidenceIds": [
+            "task_scifi_time_01_knowledge_010"
+          ],
+          "reason": "新证据与现有观点存在张力，需要评估是否修正或保留不确定",
+          "statementChanged": false
+        }
+      ],
+      "created_at": "2026-11-01T10:00:00+08:00"
+    }
+  ]
+}

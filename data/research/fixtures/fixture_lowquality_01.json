@@ -1,0 +1,12 @@
+{
+  "id": "fixture_lowquality_01",
+  "url": "https://contentfarm.example/top10-scifi",
+  "title": "十大必看科幻神作，看完改变人生！",
+  "publisher": "内容农场（虚构，仅用于原型验证）",
+  "published_at": "2026-09-01",
+  "source_type": "low_quality",
+  "reliability": "low",
+  "topic": "科幻文学",
+  "subtopic": "时间",
+  "content": "这篇文章声称，所有经典科幻都在讲同一个道理：时间旅行必须被禁止。文中断言，凡是涉及时间循环的作品都是浪费时间，读者不应该阅读。文章没有任何引用，也没有作者署名，多处内容与公开资料矛盾。"
+}
